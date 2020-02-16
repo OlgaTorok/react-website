@@ -6,7 +6,7 @@ function Home(props) {
 
     return(
         <div>
-            <Jumbo title={props.title} subTitle={props.subTitle} text={props.text} />
+            <Jumbo title={props.title} subTitle={props.subTitle} text={props.text}/>
             <Gallery />
         </div>
     );

@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import logo from "./assets/img/logo3.png";
+import "./App.css";
+
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import logo from "./logo.svg";
-import "./App.css";
 
 import Footer from "./Components/Footer";
 import Home from "./Pages/Home";
@@ -25,7 +26,7 @@ class App extends React.Component {
             home: {
                 title: "Love To Code",
                 subTitle: "Projects that make a difference",
-                text: "Checkout my projects below"
+                text: "Checkout my projects below",
             },
             about: {
                 title: "About Me"
@@ -33,15 +34,26 @@ class App extends React.Component {
             contact: {
                 title: "Let's Talk"
             }
+
         };
     }
 
+
+
     render() {
+
         return (
             <Router>
                 <Container className="p-0" fluid={true}>
                     <Navbar className="border-bottom" bg="transparent" expand="lg">
-                        <Navbar.Brand>Olga Torok</Navbar.Brand>
+                        <Navbar.Brand href="/">
+                            <img
+                                src={logo}
+                                height="100"
+                                className="d-inline-block align-top"
+                                alt="website logo"
+                            />
+                        </Navbar.Brand>
 
                         <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
                         <Navbar.Collapse id="navbar-toggle">
@@ -58,6 +70,7 @@ class App extends React.Component {
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
+
 
                 <Route path="/" exact render={() => (<Home
                         title={this.state.home.title}

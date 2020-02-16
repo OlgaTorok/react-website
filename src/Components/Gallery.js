@@ -1,9 +1,10 @@
 import React from 'react';
 
-import Card from '../Components/Card';
+import Cards from '../Components/Cards';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 import movies from './../assets/img/comp.jpg';
 import fontml5 from './../assets/img/comp.jpg';
@@ -65,7 +66,7 @@ class Gallery extends React.Component {
 
     makeItems = (items) => {
         return items.map(item => {
-            return <Card item={item} click={(e => this.handleCardClick(item.id, e))} key={item.id} />
+            return <Cards item={item}/>
         })
     }
 
@@ -74,8 +75,10 @@ class Gallery extends React.Component {
     render() {
         return (
             <Container fluid={true}>
-                <Row className = "justify-content-around">
+                <Row>
+                    <Col xs={6} md={4}>
                     {this.makeItems(this.state.items)}
+                    </Col>
                 </Row>
             </Container>
         );
