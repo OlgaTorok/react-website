@@ -11,3 +11,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Home Page - Card and CardDetail Components */
+/* ------------------------------------------ */
+.o-card {
+    margin: 20px;
+}
+
+.o-card-image {
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0px 0px 3px 1px #ccc;
+}
+
+.o-card-detail {
+  margin-top: 10px;
+  min-height: 100px;
+}
+
+.o-card-title {
+  font-size: 24px;
+  margin: 0px;
+}
+
+.o-card-sub-title {
+  font-size: 16px;
+  margin: 0px;
+}
+
+
+/* Contact Page */
+/* ------------ */
+.success-msg {
+  color: #57A773;
+  padding: 10px 15px;
+}
+
+
+.err-msg {
+  color: #EE6352;
+  padding: 10px 15px;
+}
